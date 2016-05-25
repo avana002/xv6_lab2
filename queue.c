@@ -45,3 +45,10 @@ int pop_q(struct queue *q){
     return -1;
 }
 
+int front(struct queue *q)
+{
+   return q->head->value;
+}
+
+
+

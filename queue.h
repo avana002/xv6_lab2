@@ -14,7 +14,7 @@ void init_q(struct queue *);
 void add_q(struct queue *, int);
 int empty_q(struct queue *);
 int pop_q(struct queue *);
-
+int front(struct queue *);
 
 
 
