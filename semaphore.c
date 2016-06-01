@@ -1,12 +1,14 @@
-#include "queue.c"
+#include "queue.h"
 
 struct Semaphore
 {
    int count;
-   queue q;
+   struct queue q;
 };
 
-void Sem_init(Semaphore * s, int v)
+typedef struct Semaphore Semaphore;
+
+void Sem_init(Semaphore *s, int v)
 {
    s->count = v;
    init_q(&(s->q)); 
@@ -23,7 +25,7 @@ void sem_acquire(Semaphore *s)
    else
    {
       add_queue(&(s->q),getpid());
-      while(count == 0 || front(&(s->q)) != getpid()) wait();
+      while(s->count == 0 || front(&(s->q)) != getpid()) wait();
    }
 }
 

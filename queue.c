@@ -2,6 +2,7 @@
 #include "types.h"
 #include "user.h"
 
+
 void init_q(struct queue *q){
     q->size = 0;
     q->head = 0;

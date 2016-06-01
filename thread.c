@@ -16,6 +16,10 @@ void lock_release(lock_t *lock){
     xchg(&lock->locked,0);
 }
 
+void thread_yield()
+{
+    proc->state = RUNNABLE;
+}
 
 void *thread_create(void(*start_routine)(void*), void *arg){
     int tid;
