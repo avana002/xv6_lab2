@@ -1,3 +1,6 @@
+#ifndef _QUEUE_
+#define _QUEUE_
+
 struct node{
     int value;
     struct node *next;
@@ -16,5 +19,5 @@ int empty_q(struct queue *);
 int pop_q(struct queue *);
 int front(struct queue *);
 
-
+#endif
 

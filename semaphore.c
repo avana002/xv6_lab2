@@ -1,4 +1,8 @@
 #include "queue.h"
+#include "user.h"
+
+#ifndef _SEMAPHORE_
+#define _SEMAPHORE_
 
 struct Semaphore
 {
@@ -24,7 +28,7 @@ void sem_acquire(Semaphore *s)
    //if count is zero, thread added to queue and waits
    else
    {
-      add_queue(&(s->q),getpid());
+      add_q(&(s->q),getpid());
       while(s->count == 0 || front(&(s->q)) != getpid()) wait();
    }
 }
@@ -34,3 +38,5 @@ void sem_signal(Semaphore *s)
    //increment count
    (s->count)++;
 }
+
+#endif
