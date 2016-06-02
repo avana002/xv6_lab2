@@ -177,8 +177,7 @@ UPROGS=\
 	_test_sleep\
 	_wc\
 	_zombie\
-	_nulltest\
-	_h2o\	
+	_h2o\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)

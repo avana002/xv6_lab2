@@ -1,8 +1,10 @@
 #include "queue.h"
-#include "user.h"
 
 #ifndef _SEMAPHORE_
 #define _SEMAPHORE_
+
+int wait(void);
+int getpid(void);
 
 struct Semaphore
 {

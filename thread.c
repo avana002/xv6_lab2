@@ -5,6 +5,7 @@
 #include "spinlock.h"
 #include "x86.h"
 #include "proc.h"
+#include "thread.h"
 
 void lock_init(lock_t *lock){
     lock->locked = 0;
@@ -54,4 +55,6 @@ void *thread_create(void(*start_routine)(void*), void *arg){
 
     return 0;
 }
+
+
 
