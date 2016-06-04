@@ -182,6 +182,7 @@ UPROGS=\
 	_nulltest\
 	_monkey\
 	_rowboat\
+	_yield\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
