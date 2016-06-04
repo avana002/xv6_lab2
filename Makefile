@@ -181,6 +181,7 @@ UPROGS=\
 	_h2o\
 	_nulltest\
 	_monkey\
+	_rowboat\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
