@@ -180,6 +180,7 @@ UPROGS=\
 	_temp\
 	_h2o\
 	_nulltest\
+	_monkey\
 
 fs.img: mkfs README $(UPROGS)
 	./mkfs fs.img README $(UPROGS)
